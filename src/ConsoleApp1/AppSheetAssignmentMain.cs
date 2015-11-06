@@ -29,7 +29,7 @@ namespace ConsoleApp1
                     if (counter < 5)        // Case: processed under 5 valid users
                     {
                         minPeopleArr[counter] = cur;
-                        if(oldest == null || cur.age > oldest.age)
+                        if (oldest == null || cur.age > oldest.age)
                         {
                             oldest = cur;
                         }
