@@ -1,0 +1,27 @@
+{
+    "version": "1.0.0-*",
+    "description": "ConsoleApp1 Console Application",
+    "authors": [ "Kevin" ],
+    "tags": [ "" ],
+    "projectUrl": "",
+    "licenseUrl": "",
+
+    "dependencies": {
+    },
+
+    "commands": {
+        "ConsoleApp1": "ConsoleApp1"
+    },
+
+    "frameworks": {
+        "dnx451": {
+            "frameworkAssemblies": {
+                "System.Runtime.Serialization": "4.0.0.0",
+                "System.XML": "4.0.0.0",
+                "System.Runtime.DurableInstancing": "4.0.0.0",
+                "System.Runtime.Remoting": "4.0.0.0",
+                "System.Runtime.Caching": "4.0.0.0"
+            }
+        }
+    }
+}
