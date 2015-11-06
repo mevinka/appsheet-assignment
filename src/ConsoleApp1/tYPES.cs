@@ -47,7 +47,7 @@ namespace Types
             string result = id + ". " + name + ", age " + age;
             if (number.Length != 0)
             {
-                result += " (" + number + ")";
+                result += " [" + number + "]";
             }
 
             return result;

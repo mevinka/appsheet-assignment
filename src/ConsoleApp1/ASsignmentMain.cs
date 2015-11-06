@@ -49,6 +49,10 @@ namespace ConsoleApp1
             }
 
             // Finished, output the list of people
+            Console.WriteLine("The following are the 5 youngest people with valid phone numbers");
+            Console.WriteLine();
+            Console.WriteLine("Id. Name, Age [Phone]");
+
             foreach (Person person in minPeopleArr)
             {
                 Console.WriteLine(person.ToString());
