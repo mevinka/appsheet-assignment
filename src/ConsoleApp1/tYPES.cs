@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Runtime.Serialization;
-using System.Runtime.Serialization.Json;
-using System.Net;
-using System.IO;
-using Types;
+
 
 /*
 Defines the basic type classes for the JSON objects

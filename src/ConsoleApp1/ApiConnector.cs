@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 using System.Net;
 using System.IO;
 using Types;
+using System.Text.RegularExpressions;
+
 
 /* 
 ApiConnector provides methods for interacting with the demo API
@@ -92,5 +91,21 @@ class ApiConnector
         }
 
         return ids.ToArray();
+    }
+
+    /*
+    Param: A possible phone number string
+    Returns true if the number is a seven digit number
+    separated by dashes or spaces, with optional parens
+    around the area code
+    e.g. 555-555-5555 OR (555) 555-5555 OR 555 555 5555...etc
+    */
+    public static bool IsValidPhoneNumber(String number)
+    {
+        String parenPhone = @"^\(\d{3}\)\s*\d{3}(\s|-)\d{4}$";
+        String phone = @"^\d{3}(\s*|-)\d{3}(\s|-)\d{4}$";
+        Regex parenR = new Regex(parenPhone);
+        Regex phoneR = new Regex(phone);
+        return (Regex.IsMatch(number, parenPhone) || Regex.IsMatch(number, phone));
     }
 }
